@@ -86,8 +86,6 @@ def main(isFile, g=None, errors="ignore"):
             fo = sys.argv[1]
         inputtext = fo
 
-    pyperclip.copy(fo)
-    text = str(pyperclip.paste())
     fo = text
     # matches = []
     phoneMatches = []
