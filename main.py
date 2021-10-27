@@ -36,4 +36,6 @@ api.add_resource(Users, '/luganda')  # '/luganda' is our entry point
 api.add_resource(Locations, '/locations')  # and '/locations' is our entry point for Locations
 
 
+if __name__ == '__main__':
+    app.run()
 
