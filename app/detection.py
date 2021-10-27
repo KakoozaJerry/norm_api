@@ -86,9 +86,7 @@ def main(isFile, g=None, errors="ignore"):
             fo = sys.argv[1]
         inputtext = fo
 
-    pyperclip.copy(fo)
-    text = str(pyperclip.paste())
-    fo = text
+    fo = g
     # matches = []
     phoneMatches = []
     dateMatches = []
@@ -247,7 +245,6 @@ def main(isFile, g=None, errors="ignore"):
     # PRINT DETECTED TOKENS (FOR DEBUGGING)
 
     if len(phoneMatches) > 0:
-        pyperclip.copy('\n'.join(phoneMatches))
         pd = 'PHONE NUMBERS DETECTED:'
         print(pd)
         logString += pd + "\n"
@@ -255,7 +252,6 @@ def main(isFile, g=None, errors="ignore"):
         logString += '\n'.join(phoneMatches)
 
     if len(dateMatches) > 0:
-        pyperclip.copy('\n'.join(dateMatches))
         pd = 'DATES DETECTED:'
         print(pd)
         logString += pd + "\n"
@@ -263,7 +259,6 @@ def main(isFile, g=None, errors="ignore"):
         logString += '\n'.join(dateMatches)
 
     if len(timeMatches) > 0:
-        pyperclip.copy('\n'.join(timeMatches))
         pd = 'TIME DETECTED:'
         print(pd)
         logString += pd + "\n"
@@ -271,7 +266,6 @@ def main(isFile, g=None, errors="ignore"):
         logString += '\n'.join(timeMatches)
 
     if len(currencyMatches) > 0:
-        pyperclip.copy('\n'.join(currencyMatches))
         pd = 'CURRENCIES DETECTED:'
         print(pd)
         logString += pd + "\n"
@@ -279,7 +273,6 @@ def main(isFile, g=None, errors="ignore"):
         logString += '\n'.join(currencyMatches)
 
     if len(measurementMatches) > 0:
-        pyperclip.copy('\n'.join(measurementMatches))
         pd = 'MEASUREMENTS DETECTED:'
         print(pd)
         logString += pd + "\n"
@@ -287,7 +280,6 @@ def main(isFile, g=None, errors="ignore"):
         logString += '\n'.join(measurementMatches)
 
     if len(percentageMatches) > 0:
-        pyperclip.copy('\n'.join(percentageMatches))
         pd = 'PERCENTAGES DETECTED:'
         print(pd)
         logString += pd + "\n"
@@ -295,7 +287,6 @@ def main(isFile, g=None, errors="ignore"):
         logString += '\n'.join(percentageMatches)
 
     if len(rangeMatches) > 0:
-        pyperclip.copy('\n'.join(rangeMatches))
         pd = 'RANGES DETECTED:'
         print(pd)
         logString += pd + "\n"
@@ -303,7 +294,6 @@ def main(isFile, g=None, errors="ignore"):
         logString += '\n'.join(rangeMatches)
 
     if len(abbsMatches) > 0:
-        pyperclip.copy('\n'.join(abbsMatches))
         pd = 'ABBREVIATIONS DETECTED:'
         print(pd)
         logString += pd + "\n"
@@ -311,7 +301,6 @@ def main(isFile, g=None, errors="ignore"):
         logString += '\n'.join(abbsMatches)
 
     if len(nounClassMatches) > 0:
-        pyperclip.copy('\n'.join(nounClassMatches))
         pd = 'NOUN CLASSES DETECTED:'
         print(pd)
         logString += pd + "\n"
@@ -319,7 +308,6 @@ def main(isFile, g=None, errors="ignore"):
         logString += '\n'.join(nounClassMatches)
 
     if len(numbersMatches) > 0:
-        pyperclip.copy('\n'.join(numbersMatches))
         pd = 'NUMBERS DETECTED:'
         print(pd)
         logString += pd + "\n"
