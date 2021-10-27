@@ -86,7 +86,7 @@ def main(isFile, g=None, errors="ignore"):
             fo = sys.argv[1]
         inputtext = fo
 
-    fo = text
+    fo = g
     # matches = []
     phoneMatches = []
     dateMatches = []
