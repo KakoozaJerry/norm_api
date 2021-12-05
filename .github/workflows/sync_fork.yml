@@ -1,0 +1,21 @@
+name: Sync Fork
+
+on:
+  schedule:
+    - cron: '12 7 * * 1,4' # scheduled at 07:12 every Monday and Thursday
+  workflow_dispatch: # on button click
+
+jobs:
+  sync:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: tgymnich/fork-sync@v1.3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          owner: kakoozajerry
+          base: main
+          head: main
+          auto_approve: true
+          personal_token: ${{ secrets.GH_PERSONAL_TOKEN }}
